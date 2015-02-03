@@ -1,0 +1,12 @@
+﻿<UserControl x:Class="Meteor_Storm.Zdravlje"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" Height="51.702" Width="204.319">
+
+    <Grid x:Name="LayoutRoot">
+        <TextBlock x:Name="txtZdravlje" Text="Zdravlje: " Foreground="#FFFBA206" TextWrapping="Wrap" LineStackingStrategy="MaxHeight" Margin="5,10,145,16"/>
+        <ProgressBar x:Name="pbZdravlje" HorizontalAlignment="Left" Foreground="Green" Height="16" Margin="59,10,0,0" VerticalAlignment="Top" Width="128" Value="100"/>
+    </Grid>
+</UserControl>

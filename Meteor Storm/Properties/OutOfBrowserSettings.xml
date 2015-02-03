@@ -1,0 +1,12 @@
+<OutOfBrowserSettings ShortName="Meteor Storm" EnableGPUAcceleration="False" ShowInstallMenuItem="True">
+  <OutOfBrowserSettings.Blurb>Meteor Storm Application on your desktop</OutOfBrowserSettings.Blurb>
+  <OutOfBrowserSettings.WindowSettings>
+    <WindowSettings Title="Meteor Storm" Height="600" Width="750" />
+  </OutOfBrowserSettings.WindowSettings>
+  <OutOfBrowserSettings.Icons>
+    <Icon Size="16,16">Resources/meteorid.png</Icon>
+    <Icon Size="32,32">Resources/meteorid.png</Icon>
+    <Icon Size="48,48">Resources/meteorid.png</Icon>
+    <Icon Size="128,128">Resources/meteorid.png</Icon>
+  </OutOfBrowserSettings.Icons>
+</OutOfBrowserSettings>

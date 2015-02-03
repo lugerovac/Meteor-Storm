@@ -1,0 +1,6 @@
+﻿<Canvas x:Name="LayoutRoot"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Height="350" Width="350">
+    <Ellipse x:Name="eliKillzone" Fill="#FFDE2828" HorizontalAlignment="Left" Height="350" Width="350" Opacity="0.4" Stroke="Black" VerticalAlignment="Top"/>
+</Canvas>

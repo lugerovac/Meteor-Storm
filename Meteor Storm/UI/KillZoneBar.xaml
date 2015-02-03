@@ -1,0 +1,13 @@
+﻿<UserControl x:Class="Meteor_Storm.KillZoneBar"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="44.681" Width="200">
+    
+    <Grid x:Name="LayoutRoot">
+        <TextBlock Text="KillZone: " Foreground="#FFFBA206" TextWrapping="Wrap" LineStackingStrategy="MaxHeight" Margin="5,10,145,16"/>
+        <ProgressBar x:Name="pbKillZone" HorizontalAlignment="Left" Foreground="Black" Height="16" Margin="62,10,0,0" VerticalAlignment="Top" Width="128" Value="100"/>
+    </Grid>
+</UserControl>

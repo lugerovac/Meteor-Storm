@@ -1,0 +1,281 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BBFD4530-C10C-427E-B590-390D3892AAFA}</ProjectGuid>
+    <ProjectTypeGuids>{A1591282-1198-4647-A2B1-27E5FF5F6F3B};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Meteor_Storm</RootNamespace>
+    <AssemblyName>Meteor Storm</AssemblyName>
+    <TargetFrameworkIdentifier>Silverlight</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v5.0</TargetFrameworkVersion>
+    <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
+    <SilverlightApplication>true</SilverlightApplication>
+    <SupportedCultures>
+    </SupportedCultures>
+    <XapOutputs>true</XapOutputs>
+    <GenerateSilverlightManifest>true</GenerateSilverlightManifest>
+    <XapFilename>Meteor Storm.xap</XapFilename>
+    <SilverlightManifestTemplate>Properties\AppManifest.xml</SilverlightManifestTemplate>
+    <SilverlightAppEntry>Meteor_Storm.App</SilverlightAppEntry>
+    <TestPageFileName>Meteor_StormTestPage.html</TestPageFileName>
+    <CreateTestPage>true</CreateTestPage>
+    <ValidateXaml>true</ValidateXaml>
+    <EnableOutOfBrowser>true</EnableOutOfBrowser>
+    <OutOfBrowserSettingsFile>Properties\OutOfBrowserSettings.xml</OutOfBrowserSettingsFile>
+    <UsePlatformExtensions>false</UsePlatformExtensions>
+    <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+    <LinkedServerProject>
+    </LinkedServerProject>
+  </PropertyGroup>
+  <!-- This property group is only here to support building this project using the 
+       MSBuild 3.5 toolset. In order to work correctly with this older toolset, it needs 
+       to set the TargetFrameworkVersion to v3.5 -->
+  <PropertyGroup Condition="'$(MSBuildToolsVersion)' == '3.5'">
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="mscorlib" />
+    <Reference Include="System.Windows" />
+    <Reference Include="system" />
+    <Reference Include="System.Core">
+      <HintPath>$(TargetFrameworkDirectory)System.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Windows.Browser" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Stitovi.xaml.cs">
+      <DependentUpon>Stitovi.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\GrumenjeStatus.xaml.cs">
+      <DependentUpon>GrumenjeStatus.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Sprites\Grumen.cs" />
+    <Compile Include="UI\Informacije.xaml.cs">
+      <DependentUpon>Informacije.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Sprites\Sonda.cs" />
+    <Compile Include="UI\KillZoneBar.xaml.cs">
+      <DependentUpon>KillZoneBar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Sprites\KillZone.cs" />
+    <Compile Include="UI\Rezultati.xaml.cs">
+      <DependentUpon>Rezultati.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Sprites\eksplozija.cs" />
+    <Compile Include="Sprites\Torpedo.cs" />
+    <Compile Include="UI\Torpedi.xaml.cs">
+      <DependentUpon>Torpedi.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\MeteorsPassed.xaml.cs">
+      <DependentUpon>MeteorsPassed.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Sprites\Meteorite.cs" />
+    <Compile Include="Resources\KeyHandler.cs" />
+    <Compile Include="Resources\GameLoop.cs" />
+    <Compile Include="MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Sprites\Ship.cs" />
+    <Compile Include="Sprites\Sprite.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\Vector.cs" />
+    <Compile Include="UI\UpucaniMeteori.xaml.cs">
+      <DependentUpon>UpucaniMeteori.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Zdravlje.xaml.cs">
+      <DependentUpon>Zdravlje.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Zivoti.xaml.cs">
+      <DependentUpon>Zivoti.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </ApplicationDefinition>
+    <EmbeddedResource Include="Sprites\eksplozija.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sprites\KillZone.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sprites\Sonda.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sprites\Grumen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sprites\ShipShielded.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <Page Include="UI\Stitovi.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\GrumenjeStatus.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Informacije.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\KillZoneBar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <EmbeddedResource Include="Sprites\Ship.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sprites\Meteorite.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sprites\Torpedo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sprites\MeteoriteMini.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <Page Include="UI\Rezultati.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Torpedi.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\MeteorsPassed.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\UpucaniMeteori.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Zdravlje.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Zivoti.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\AppManifest.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\meteorid.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="Resources\meteorid2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Torpedo2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Shuttle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\eksplozija.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Svemir.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\btnStartGraphic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\btnStartHooverGraphic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Sonda.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Grumen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Unisteno.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\PozadinskaGlazba.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Explosion.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Grumen.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Torpedo.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Torpedo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\btnContinue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\OutOfBrowserSettings.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Silverlight\$(SilverlightVersion)\Microsoft.Silverlight.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{A1591282-1198-4647-A2B1-27E5FF5F6F3B}">
+        <SilverlightProjectProperties />
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
